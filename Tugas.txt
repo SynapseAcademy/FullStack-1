@@ -1,0 +1,19 @@
+Tugas :
+1. Menampilkan Bulan dalam b. Indonesia (Menggunakan Swict case)
+   January -> Januari
+   Februari -> Februari
+   dst...
+2. Menampilkan hanya bil. ganjil/genap (Perulangan FOR) (Tampilkan menggunakan Form)
+   Bil. Ganjil :              Bil. Genap
+   1,3,5,dst...               2,4,6,dst...
+3. Menampilkan data pribadi (Menggunakan Array) (Tampilkan ke dalam tabel)
+   _______________________
+   |Nama     | Budi      |
+   -----------------------
+   |Gender   | Pria      |
+   -----------------------
+   |dst... data pribadi  | 
+   -----------------------
+4. Menampilkan Format waktu dalam b.Indonesia ( Mengggunakan Function)
+   2020/02/20 -> Kamis, 20 Februari 2020
+
