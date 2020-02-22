@@ -17,3 +17,4 @@ Tugas :
 4. Menampilkan Format waktu dalam b.Indonesia ( Mengggunakan Function)
    2020/02/20 -> Kamis, 20 Februari 2020
 
+test
