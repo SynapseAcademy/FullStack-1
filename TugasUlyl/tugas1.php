@@ -1,5 +1,6 @@
    <?php
    $tanggal = date("F");
+
    switch ($tanggal) {
       case 'January':
          $bulan = "Januari";

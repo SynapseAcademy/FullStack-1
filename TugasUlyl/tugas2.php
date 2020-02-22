@@ -4,7 +4,7 @@
       <tr>
          <th width="200"><label for="ulang">Banyak Perulangan</label></td>
          <td>
-            <input type="number" name="ulang" id="ulang" maxlength="1000" value="<?= (isset($_POST['ulang'])) ? $_POST['ulang'] : '' ?>">
+            <input type="number" name="ulang" id="ulang" value="<?= (isset($_POST['ulang'])) ? $_POST['ulang'] : '' ?>">
          </td>
       </tr>
       <tr>
