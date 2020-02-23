@@ -1,0 +1,270 @@
+#main {
+    font-family: 'Montserrat';
+}
+
+/* navbar */
+.navbar-nav {
+    padding-right: 100px;
+}
+
+
+/* Landing Pages */
+/* carousel */
+.visual {
+    background-image: url(/Assets/Carousel/Path\ 49.png);
+    height: 790px;
+    width: 100%;
+}
+
+.carousel {
+    margin-top: -600px;
+    margin-left: 50px;
+}
+
+.carousel img {
+    margin-left: 50px;
+}
+
+.carousel h1 {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.carousel h5 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: normal;
+}
+
+
+.btn {
+    border-radius: 100px;
+    height: auto;
+    width: 161px;
+}
+
+
+/* bisnis kami */
+.bisnis-kami h1, .energia-news h1 {
+    font-size: 30px;
+}
+
+.bisnis-kami {
+    margin-top: 20px;
+}
+
+.bisnis-kami h5, .energia-news h5, 
+.info-recruitment h5 {
+    margin-top: 15px;
+} 
+
+.bisnis-kami h5, .info-recruitment h5, .energia-news-content h5{
+    font-size: 20px;
+    color: #707070;
+}
+
+.bisnis-kami span, .energia-news span, 
+.info-recruitment span, .energia-content span,
+.berita-terkini-single span  {
+    font-weight: bold;
+}
+
+
+/* content-bisnis-kami */
+.visual1 {
+    background-image: url(/Assets/row1/Group\ 96.png);
+    height: 690px;
+    width: auto;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.grup-icon1 {
+    margin-top: 50px;
+}
+
+.content-bisnis-kami {
+    margin-top: -550px ;
+}
+
+
+/* energia-news */
+.visual2 {
+    background-image: url(/Assets/row2/Path\ 56.png);
+    height: 690px;
+    width: auto;
+    margin-top: -750px;
+   
+}
+
+.energia-news {
+    margin-top: 450px ;
+    margin-bottom: 350px;
+}
+
+.energia-news h6 {
+    margin-top: 15px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #7A8282;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* info recruitment */
+
+
+.info-recruitment h6 {
+    margin-top: 15px;
+    line-height: 30px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
+
+.visual3 {
+    margin-top: -295px;
+    background-image: url(/Assets/row3/Group\ 98.png);
+    height: 332px;
+    width: 1012px;
+    
+}
+
+/* Akhir Landing Pages */
+
+
+/* Single-Product */
+/* energia content */
+.energia-content {
+    margin-top: 150px;
+}
+
+.berita-terkini-single h5 {
+    font-size: 30px;
+}
+
+.deskripsi {
+    margin-left: 30px;
+}
+
+.energia-content h4 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: rgb(146, 170, 170);
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.energia-content h3 {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+
+/* berita-terkini-single */
+.berita-terkini-single {
+    margin-top: 100px;
+}
+
+.berita-terkini-single h4 {
+    margin-top: 18px;
+    font-size: 18px;
+    color: rgb(131, 156, 156);
+}
+
+
+.card-text{
+    font-size: 15px;
+}
+/* Akhir  Single-Product */
+
+
+
+/* info-reqruitment */
+.info-reqruitment {
+  background-color: #FC7971;
+  height: 550px;
+  width: 1366px;
+  margin-top: 80px;
+  margin-bottom: 400px;
+}
+
+
+.info-reqruitment span {
+    font-weight: bold;
+}
+
+.info-reqruitment h5 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.info-reqruitment h1 {
+    margin-top: 80px;
+    color: #fff;
+} 
+
+/* .tab-content */
+.tab-content {
+    margin-bottom: 100px;
+    border: 1 px solid rgb(222, 226, 230);
+    height: 439px;
+    width: auto;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.336);
+}
+
+
+.informasi-content h5 {
+    margin-left: 50px;
+    color: rgb(51, 51, 48);
+    font-size: 13px;
+}
+
+/* berita-content */
+.berita-content {
+    margin-left: 50px;
+    margin-top: 20px;
+   
+}
+
+.berita-content h5 {
+    font-size: 15px;
+    color: rgb(60, 71, 71);
+    margin-left: 50px;
+}
+
+.berita-content {
+    height: 400px;
+    overflow: scroll;
+}
+
+/* footer */
+.footer{
+    margin-top: 280px;
+    font-size: 13px;
+    color: aliceblue;
+ }
+ 
+ .visual4 {
+     margin-top: -320px;
+     background-image: url(/Assets/row4/Path\ 64.png);
+     height: 350.39px;
+     width: auto;
+ }
+
+ .footer2 h6{
+     color: rgb(180, 187, 194);
+     font-size: 13px;
+ }
+ 
