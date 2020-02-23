@@ -43,6 +43,10 @@ function tanggal_indo($tanggal, $cetak_hari = false)
    return $tgl_indo;
 }
 
+//memanggil function
+$waktu = date("Y-m-d H:i:s");
+echo tanggal_indo($waktu, true);
+
 
 
 function aritmatika($angka1, $angka2, $operator = "tambah")
