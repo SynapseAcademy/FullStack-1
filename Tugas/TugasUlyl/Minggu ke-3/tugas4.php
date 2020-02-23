@@ -27,7 +27,9 @@ function tanggal_indo($tanggal, $cetak_hari = false)
       'November',
       'Desember'
    );
+
    // $split     = explode('-', $tanggal);
+
    $split1      = explode(' ', $tanggal);
    $tgl         = $split1[0];
    $tgl_expload = explode('-', $tgl);
@@ -35,8 +37,34 @@ function tanggal_indo($tanggal, $cetak_hari = false)
    $tgl_indo    = $tgl_expload[2] . ' ' . $bulan[(int) $tgl_expload[1]] . ' ' . $tgl_expload[0];
 
    if ($cetak_hari) {
-      $num = date('N', strtotime($tanggal));
+      $num = date('N');
       return $hari[$num] . ', ' . $tgl_indo;
    }
    return $tgl_indo;
 }
+
+
+
+function aritmatika($angka1, $angka2, $operator = "tambah")
+{
+   switch ($operator) {
+      case 'tambah':
+         $hasil = $angka1 + $angka2;
+         break;
+      case 'kali':
+         $hasil = $angka1 * $angka2;
+         break;
+      case 'bagi':
+         $hasil = $angka1 / $angka2;
+         break;
+      case 'kurang':
+         $hasil = $angka1 - $angka2;
+         break;
+      default:
+         $hasil = 0;
+         break;
+   }
+   return $hasil;
+}
+
+echo aritmatika(10, 5);
