@@ -1,10 +1,10 @@
 <div class="container">
    <div class="row jarakatas">
       <div class="col">
-         <h4>Bergabung <b class="text-info">Bersama Kami <i class="fa fa-users"></i></b> </h4>
+         <h4>Bergabunglah <b class="text-info">Bersama Kami <i class="fa fa-users"></i></b> </h4>
          <img class="line-1" src="./Assets/row1/Line 2.png" alt="">
          <div class="alert alert-primary" role="alert">
-            <i class="fa fa-info-circle"></i> registrasi telebih dahulu sebelum melanjutkan proses <i><b class="text-success">Apply</b></i>
+            <i class="fa fa-info-circle"></i> <a href="?page=register"><u>Registrasi</u></a> terlebih dahulu sebelum melanjutkan proses <i><b class="text-success">Apply</b></i>
          </div>
 
          <div class="row">
@@ -22,29 +22,32 @@
                   <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                      <h5>
                         <i class="fa fa-product-hunt"></i> Program Reguler
-                        <small class="text-muted">With faded secondary text</small>
+                        <small class="text-muted">3 available jobs for you !</small>
                      </h5>
                      <hr>
                      <ul class="list-unstyled">
                         <li class="media">
                            <img src="https://anakunsri.com/wp-content/uploads/2017/07/kelebihan-dan-kekurangan-pegawai-bank.jpg" class="mr-3" alt="..." style="width: 20%">
                            <div class="media-body">
-                              <h5 class="mt-0 mb-1">List-based media object</h5>
-                              <p class='text-justify font-weight-lighter'>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                              <h5 class="mt-0 mb-1">Graphic Designer Internship</h5>
+                              <p class='text-justify font-weight-lighter mb-0'>PT Pricebook Digital Indonesia <i class="fa fa-warning text-warning"></i> </p>
+                              <p class="text-muted">South Jakarta, Indonesia · 1,000,000.00 -  1,500,000.00 IDR/ month</p>
                            </div>
                         </li>
                         <li class="media my-4">
                            <img src="https://sleekr.co/wp-content/uploads/2019/01/Sleekr_Blog_4-Perbedaan-Utama-dari-Slip-Gaji-Pegawai-Tetap-dan-Pegawai-Tidak-Tetap.jpg" class="mr-3" style="width: 20%" alt="...">
                            <div class="media-body">
-                              <h5 class="mt-0 mb-1">List-based media object</h5>
-                              <p class='text-justify font-weight-lighter'>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                              <h5 class="mt-0 mb-1"> Back End Developer</h5>
+                              <p class='text-justify font-weight-lighter mb-0'>PT Dwimitra Raya Sejati <i class="fa fa-check-circle text-success"></i></p>
+                              <p class="text-muted">South Jakarta, Indonesia · 8,000,000.00 -  10,000,000.00 IDR/ month</p>
                            </div>
                         </li>
                         <li class="media">
                            <img src="https://garudacyber.co.id/an-component/media/upload-gambar-artikel/pegawai-bank.jpg" class="mr-3" alt="..." style="width: 20%">
                            <div class="media-body">
-                              <h5 class="mt-0 mb-1">List-based media object</h5>
-                              <p class='text-justify font-weight-lighter'>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                              <h5 class="mt-0 mb-1">Finance and Accounting Manager</h5>
+                              <p class='text-justify font-weight-lighter mb-0'>PT Takjub Teknologi Indonesia (Ajaib) <i class="fa fa-check-circle text-success"></i></p>
+                              <p class="text-muted">West Jakarta, Indonesia (Remote work) · 15,000,000.00 -  20,000,000.00 IDR/ month</p>
                            </div>
                         </li>
                      </ul>
