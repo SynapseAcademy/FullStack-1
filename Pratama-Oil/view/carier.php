@@ -1,1 +1,85 @@
-<h1 style="margin-top: 100px">Halaman Carier</h1>
+<div class="container">
+   <div class="row jarakatas">
+      <div class="col">
+         <h4>Bergabung <b class="text-info">Bersama Kami <i class="fa fa-users"></i></b> </h4>
+         <img class="line-1" src="./Assets/row1/Line 2.png" alt="">
+         <div class="alert alert-primary" role="alert">
+            <i class="fa fa-info-circle"></i> registrasi telebih dahulu sebelum melanjutkan proses <i><b class="text-success">Apply</b></i>
+         </div>
+
+         <div class="row">
+            <div class="col-3">
+               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Reguler</a>
+                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Prohire</a>
+                  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Beasiswa</a>
+                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Campus Hiring</a>
+                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-odp" role="tab" aria-controls="v-pills-settings" aria-selected="false">ODP</a>
+               </div>
+            </div>
+            <div class="col-9">
+               <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                     <h5>
+                        <i class="fa fa-product-hunt"></i> Program Reguler
+                        <small class="text-muted">With faded secondary text</small>
+                     </h5>
+                     <hr>
+                     <ul class="list-unstyled">
+                        <li class="media">
+                           <img src="https://anakunsri.com/wp-content/uploads/2017/07/kelebihan-dan-kekurangan-pegawai-bank.jpg" class="mr-3" alt="..." style="width: 20%">
+                           <div class="media-body">
+                              <h5 class="mt-0 mb-1">List-based media object</h5>
+                              <p class='text-justify font-weight-lighter'>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                           </div>
+                        </li>
+                        <li class="media my-4">
+                           <img src="https://sleekr.co/wp-content/uploads/2019/01/Sleekr_Blog_4-Perbedaan-Utama-dari-Slip-Gaji-Pegawai-Tetap-dan-Pegawai-Tidak-Tetap.jpg" class="mr-3" style="width: 20%" alt="...">
+                           <div class="media-body">
+                              <h5 class="mt-0 mb-1">List-based media object</h5>
+                              <p class='text-justify font-weight-lighter'>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                           </div>
+                        </li>
+                        <li class="media">
+                           <img src="https://garudacyber.co.id/an-component/media/upload-gambar-artikel/pegawai-bank.jpg" class="mr-3" alt="..." style="width: 20%">
+                           <div class="media-body">
+                              <h5 class="mt-0 mb-1">List-based media object</h5>
+                              <p class='text-justify font-weight-lighter'>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                     <h5>
+                        <i class="fa fa-info"></i> Program Prohire
+                        <small class="text-muted">Belum ada info yang terkait program prohire</small>
+                     </h5>
+                     <hr>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                     <h5>
+                        <i class="fa fa-info"></i> Program Beasiswa
+                        <small class="text-muted">Belum ada info yang terkait program beasiswa</small>
+                     </h5>
+                     <hr>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                     <h5>
+                        <i class="fa fa-info"></i> Program Campus Hiring
+                        <small class="text-muted">Belum ada info yang terkait campus hiring</small>
+                     </h5>
+                     <hr>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-odp" role="tabpanel" aria-labelledby="v-pills-odp-tab">
+                     <h5>
+                        <i class="fa fa-info"></i> Program ODP
+                        <small class="text-muted">Belum ada info yang terkait ODP</small>
+                     </h5>
+                     <hr>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
