@@ -1,3 +1,6 @@
+<?php
+require_once 'config/koneksi.php';
+?>
 <!doctype html>
 <html lang="en">
 
