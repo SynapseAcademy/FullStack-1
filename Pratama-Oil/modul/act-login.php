@@ -7,8 +7,8 @@ if (isset($_POST['submit-login'])) {
    //melakukan pengampilan data dari database untuk di cocokkan
    $query  = mysqli_query($konek, "SELECT * from users where email='$email'");
 
-   $xx1 = mysqli_num_rows($query);
-   $xxx    = mysqli_fetch_assoc($query); //0 1    //mela=kukan pencocokan
+   $xx1 = mysqli_num_rows($query); //0 1    //melakukan pencocokan
+   $xxx    = mysqli_fetch_assoc($query);
 
    if ($xx1 == TRUE) {               //jika benar tampilkan pesan berhasil login
       if ($xxx['password'] == $pass) {
