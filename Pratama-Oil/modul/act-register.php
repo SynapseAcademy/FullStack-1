@@ -9,10 +9,10 @@ if (isset($_POST['submit-register'])) {
 
    $valid = $angka1 + $angka2; //menjumlahkan angka1 dan angka2
    if ($cek == $valid) { //jika penjumlahan angka1 dan angka2 sama dengan angka yang diinputkan user
-      $sql = "INSERT INTO users (email, username, password, status, level, login_at) VALUES ('$email','$username','$password', 'Y','2', CURRENT_TIMESTAMP())";
-      $query = mysqli_query($konek, $sql);
+      $query = mysqli_query($konek, "INSERT INTO users (email, username, password, status, level, login_at) VALUES ('$email','$username','$password', 'Y','2', CURRENT_TIMESTAMP())");
+
       if ($query) {
-         $_SESSION['register_success'] = 'Registrasi Berhasil';
+         $_SESSION['register_success'] = 'Registrasi Berhasil. Silahkan Login!';
          unset($_SESSION['angka1']);
          unset($_SESSION['angka2']);
          header('Location: ?page=register');

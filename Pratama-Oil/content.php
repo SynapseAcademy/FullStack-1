@@ -12,6 +12,9 @@ switch ($halaman) {
    case 'register':
       include 'view/register.php';
       break;
+   case 'login':
+      include 'view/login.php';
+      break;
    case 'about':
       include 'view/about.php';
       break;
@@ -33,8 +36,9 @@ switch ($halaman) {
    case 'act-register':
       include 'modul/act-register.php';
       break;
-
-
+   case 'act-login':
+      include 'modul/act-login.php';
+      break;
 
    default:
       include 'view/404.php';
