@@ -60,7 +60,7 @@ $multidimensi = [
 var_dump($multidimensi);
 ?>
 
-<h3>Menampilkan Menggunakan FOREACH</h3>
+<h3>Menampilkan Menggun akan FOREACH</h3>
 <table border="1">
    <tr>
       <th>No</th>
