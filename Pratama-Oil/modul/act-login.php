@@ -13,7 +13,7 @@ if (isset($_POST['submit-login'])) {
    if ($xx1 == TRUE) {               //jika benar tampilkan pesan berhasil login
       if ($xxx['password'] == $pass) {
          if ($xxx['status'] == 'Y') {
-            echo "<hr><hr><hr><hr> Berhasil login";
+            header('Location: ./admin/index.php');
          } else {
             echo "<hr><hr><hr><hr> Akun belum diaktifkan";
          }

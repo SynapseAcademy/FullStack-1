@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,7 @@
    <?php include 'content.php' ?>
 
    <?php include 'templates/footer.php' ?>
+
 </body>
 
 </html>

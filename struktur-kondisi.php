@@ -35,3 +35,23 @@ echo $kabisat = ($tanggal % 4 == 0) ? "KABISAT" : "Bukan KABISAT";
       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
    </div>
 </form>
+
+
+<?php
+//IF KHUSUS
+//Kondisi Pertama              //Jika kondisi pertama benar (1.1)   //Jika kondisi (1.1) Benar    //false      //false
+echo (isset($_POST['jenis'])) ? $_POST['jenis'] == "both" ?                  "checked"             : ''          : '';
+
+//SAMA DENGAN NORMAL IF DIBAWAH INI
+
+if (isset($_POST['jenis'])) { //Kondisi pertama
+   if ($_POST['jenis'] == 'both') { //membuat kondisi baru (1.1) jika Kondisi pertama benar
+      echo 'checked'; //Statement JIka Memenuhi kondisi (1.1)
+   } else {
+      ''; // Jika Tidak memenuhi kondisi (1.1)
+   }
+} else {
+   ''; //JIka tidak memenuhi kondisi kedua
+}
+
+?>
