@@ -4,7 +4,7 @@
          <h4>Bergabunglah <b class="text-info">Bersama Kami <i class="fa fa-users"></i></b> </h4>
          <img class="line-1" src="./Assets/row1/Line 2.png" alt="">
          <div class="alert alert-primary" role="alert">
-            <i class="fa fa-info-circle"></i> <a href="?page=register"><u>Registrasi</u></a> terlebih dahulu sebelum melanjutkan proses <i><b class="text-success">Apply</b></i>
+            <i class="fa fa-info-circle"></i> <a href="?page=register"><u>Registrasi</u></a> terlebih dahulu sebelum melanjutkan proses <i><b class="text-success">Apply</b> <a href="?page=login">Login</a></i>
          </div>
 
          <div class="row">
