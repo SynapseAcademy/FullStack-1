@@ -1,3 +1,4 @@
+<!-- MENAMPILKAN DATA USERS -->
 <table border="1">
    <tr>
       <th>No</th>
@@ -22,7 +23,7 @@
          <td><?= $data['level'] ?></td>
          <td><?= $data['login_at'] ?></td>
          <td>
-            <a href="#">Edit</a> |
+            <a href="index.php?act=edit&id=<?= $data['id_user'] ?>">Edit</a> |
             <?php
             if ($data['level'] == 'Administrator') {
                echo '';
@@ -36,6 +37,16 @@
    <?php endwhile ?>
 </table>
 
+<?php
+if (isset($_GET['act'])) {
+   if ($_GET['act'] == 'edit') {
+      include 'edit-users.php';
+   }
+}
+?>
+
+
+<!-- PROSES DELETE USERS -->
 <?php
 // NOTIFIKASI BILA BERHASIL HAPUS
 if (isset($_SESSION['pesan'])) {
