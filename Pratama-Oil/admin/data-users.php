@@ -37,10 +37,14 @@
 </table>
 
 <?php
+// NOTIFIKASI BILA BERHASIL HAPUS
 if (isset($_SESSION['pesan'])) {
    echo $_SESSION['pesan'];
+   unset($_SESSION['pesan']);
 }
 
+
+// PROSES HAPUS DATA USERS
 if (isset($_GET['act'])) {
    if ($_GET['act'] == 'delete') {
       $iduser = $_GET['id'];
