@@ -1,4 +1,5 @@
 <!-- MENAMPILKAN DATA USERS -->
+<a href="index.php?act=edit-password">Edit Password</a>
 <table border="1">
    <tr>
       <th>No</th>
@@ -23,7 +24,7 @@
          <td><?= $data['level'] ?></td>
          <td><?= $data['login_at'] ?></td>
          <td>
-            <a href="index.php?act=edit&id=<?= $data['id_user'] ?>">Edit</a> |
+            <a href="index.php?act=edit&iduser=<?= $data['id_user'] ?>">Edit</a> |
             <?php
             if ($data['level'] == 'Administrator') {
                echo '';
@@ -41,6 +42,8 @@
 if (isset($_GET['act'])) {
    if ($_GET['act'] == 'edit') {
       include 'edit-users.php';
+   } else if ($_GET['act'] == 'edit-password') {
+      include 'edit-password.php';
    }
 }
 ?>

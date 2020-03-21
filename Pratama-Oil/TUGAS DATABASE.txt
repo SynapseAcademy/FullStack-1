@@ -1,8 +1,15 @@
 1. Tampilkan Seluruh Data users
+   SELECT * FROM users
 2. Tampilkan Seluruh Data level
+   Select * From level
 3. Tampilkan Seluruh Data profil
+   SELECT * FROM profil
 4. Tampilkan Seluruh Data users yang username nya berawalan 'bu*' dan berjenis kelamin pria
+   SELECT * FROm users inner join profil on users.id_user=profil.id_user WHERE left(users.username, 2) ="bu" AND profil.jk = "PRIA"
+
 5. Tampilkan Data tabel users yang levelnya user
+   SELECT * FROM users inner join level on users.id_level=level.id_level WHERE level = "user"
+
 6. Tampilkan Data tabel users yang levelnya administrator
 7. Tampilkan Data tabel users yang status akunya tidak aktif
 8. Tampilkan Data users yang kontaknya = null
@@ -17,6 +24,8 @@
 17. Tampilkan Data users yang aktif dan levelnya user serta berjenis kelamin perempuan
 18. Tampilkan Data users (username, kontak) yang kontaknya tidak kosong
 19. Tampilkan Data users (Username, alamat) yang alamatnya tidak kosong
+    SELECT users.username, profil.alamat FROM users inner join profil on users.id_users=profil.id_user WHERE profil.alamat is not null
+
 20. Update data users ubah kontak menjadi 089999999 yang levelnya users
 21. Tambah Data users 
 22. Tambah Data profil

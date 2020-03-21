@@ -1,12 +1,12 @@
 <div class="menu">
    <ul>
-      <a href="index.php">
+      <a href="?page=index">
          <li>Home</li>
       </a>
-      <a href="about.php">
+      <a href="?page=about">
          <li>About</li>
       </a>
-      <a href="contact.php">
+      <a href="?page=contact">
          <li>Contact</li>
       </a>
    </ul>

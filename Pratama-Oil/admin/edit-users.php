@@ -1,6 +1,6 @@
 <!-- FORM EDIT USERS -->
 <?php
-$iduser = $_GET['id'];
+$iduser = $_GET['iduser'];
 $sql = "SELECT * FROM users WHERE id_user = '$iduser'";
 $query = mysqli_query($konek, $sql);
 $data = mysqli_fetch_assoc($query);
