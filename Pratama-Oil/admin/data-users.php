@@ -57,7 +57,6 @@ if (isset($_SESSION['pesan'])) {
    unset($_SESSION['pesan']);
 }
 
-
 // PROSES HAPUS DATA USERS
 if (isset($_GET['act'])) {
    if ($_GET['act'] == 'delete') {

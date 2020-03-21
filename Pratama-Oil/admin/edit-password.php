@@ -1,21 +1,33 @@
 <h1>Edit Password Users</h1>
-
 <form method="POST" action="">
    <table>
+      <tr>
+         <th align="left">
+            <label>Masukkan Password yang Lama</label>
+         </th>
+         <td>
+            <input type="text" name="passLama">
+         </td>
+      </tr>
+      <tr>
+         <td colspan="2">
+            <hr>
+         </td>
+      </tr>
       <tr>
          <th align="left">
             <label>Password Baru</label>
          </th>
          <td>
-            <input type="text" name="passBaru">
+            <input type="password" name="passBaru">
          </td>
       </tr>
       <tr>
-         <th>
+         <th align="left">
             <label>Ulangi Password Baru</label>
          </th>
          <td>
-            <input type="text" name="passBaru2">
+            <input type="password" name="passBaru2">
          </td>
       </tr>
       <tr>
@@ -29,25 +41,36 @@
 <?php
 if (isset($_POST['btn-SimpanPassword'])) {
    $iduser = $_SESSION['iduser'];
-   $passBaru = $_POST['passBaru'];
-   $passUlang = $_POST['passBaru2'];
+   $passLama = md5($_POST['passLama']);
 
-   if ($passBaru == '') {
-      echo "Data Password Baru Harus diisi terlebih dahulu";
-   } else if ($passUlang == '') {
-      echo "Data Ulangi Password Harus diisi terlebih dahulu";
+   $passBaru = md5($_POST['passBaru']);
+   $passUlang = md5($_POST['passBaru2']);
+
+   $sql1   = "SELECT * FROM users WHERE id_user = '$iduser' and password = '$passLama'"; //Vriabel yang bertipe data String
+   $query1 = mysqli_query($konek, $sql1);
+   $cek    = mysqli_num_rows(mysqli_query($konek, $sql1)); //kalo ada data (1) -- Kalo gak ada data (0)
+
+   if ($cek == 0) {
+      echo "Password yang lama tidak sesuai dengan database";
    } else {
-      //JIka Semua inputan telah diisi
-      if ($passBaru <> $passUlang) {
-         echo "Password tidak sama";
+      //PROSES JIKA PASSLAMO LAMA SUDAH BENAR DIINPUTKAN
+      if ($passBaru == '') {
+         echo "Data Password Baru Harus diisi terlebih dahulu";
+      } else if ($passUlang == '') {
+         echo "Data Ulangi Password Harus diisi terlebih dahulu";
       } else {
-         $sql = "UPDATE users SET password='$passBaru' where id_user ='$iduser'";
-         $query = mysqli_query($konek, $sql);
-         if ($query) {
-            echo "Password Berhasil diupdate";
-            header("Location: index.php");
+         //JIka Semua inputan telah diisi
+         if ($passBaru <> $passUlang) {
+            echo "Password tidak sama";
          } else {
-            echo "Terjadi Kesalahan " . mysqli_error($konek);
+            $sql = "UPDATE users SET password='$passBaru' where id_user ='$iduser'";
+            $query = mysqli_query($konek, $sql);
+            if ($query) {
+               $_SESSION['pesan'] = 'Password Berhasil diubah';
+               header("Location: index.php");
+            } else {
+               echo "Terjadi Kesalahan " . mysqli_error($konek);
+            }
          }
       }
    }

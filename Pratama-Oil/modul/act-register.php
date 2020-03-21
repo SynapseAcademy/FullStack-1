@@ -2,7 +2,7 @@
 if (isset($_POST['submit-register'])) {
    $username = trim($_POST['username']); //ambil nilai inputan username
    $email    = $_POST['email']; //ambil nilai inputan email
-   $password = $_POST['password']; //ambil nilai inputan password
+   $password = md5($_POST['password']); //ambil nilai inputan password
    $cek      = $_POST['cek']; //ambil nilai inputan cek
    $angka1   = $_SESSION['angka1']; //angka pertama yang akan dicek
    $angka2   = $_SESSION['angka2']; //angka kedua yang akan dicek

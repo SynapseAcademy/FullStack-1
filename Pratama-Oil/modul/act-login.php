@@ -2,7 +2,7 @@
 if (isset($_POST['submit-login'])) {
 
    $email =  $_POST['email']; //tangkap data yg di input dari form login input email
-   $pass = $_POST['password']; //tangkap data yg di input dari form login input password
+   $pass = md5($_POST['password']); //tangkap data yg di input dari form login input password
 
    //melakukan pengampilan data dari database untuk di cocokkan
    $query  = mysqli_query($konek, "SELECT * from users where email='$email'");
