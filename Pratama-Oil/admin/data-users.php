@@ -1,6 +1,5 @@
 <!-- MENAMPILKAN DATA USERS -->
-<a href="index.php?act=edit-password">Edit Password</a>
-<table border="1">
+<table class="table table-hover table-striped">
    <tr>
       <th>No</th>
       <th>Username</th>
@@ -24,7 +23,7 @@
          <td><?= $data['level'] ?></td>
          <td><?= $data['login_at'] ?></td>
          <td>
-            <a href="index.php?act=edit&iduser=<?= $data['id_user'] ?>">Edit</a> |
+            <a href="index.php?halaman=edit-user&iduser=<?= $data['id_user'] ?>">Edit</a> |
             <?php
             if ($data['level'] == 'Administrator') {
                echo '';

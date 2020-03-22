@@ -7,8 +7,8 @@ $data = mysqli_fetch_assoc($query);
 ?>
 <hr>
 <form action="" method="POST">
-   <input type="text" name="iduser" value="<?= $data['id_user'] ?>">
-   <table border="1">
+   <input type="text" name="iduser" hidden value="<?= $data['id_user'] ?>">
+   <table class="table">
       <caption>Edit Users <?= $data['username'] ?></caption>
       <tr>
          <th align="left">Email</th>
@@ -27,7 +27,7 @@ $data = mysqli_fetch_assoc($query);
          <th align="left">Level</th>
          <td>:</td>
          <td>
-            <select name="level">
+            <select name="level" class="form-control form-control-sm">
                <option value="1" <?= $data['level'] == 1 ? 'selected' : '' ?>>Administrator</option>
                <option value="2" <?= $data['level'] == 2 ? 'selected' : '' ?>>User</option>
             </select>
@@ -35,7 +35,7 @@ $data = mysqli_fetch_assoc($query);
       </tr>
       <tr>
          <td colspan="3">
-            <button type="submit" name="simpan-users">Simpan Perubahan</button>
+            <button type="submit" class="btn btn-success" name="simpan-users">Simpan Perubahan</button>
          </td>
       </tr>
    </table>
@@ -52,7 +52,7 @@ if (isset($_POST['simpan-users'])) {
 
    if ($query) {
       echo "Data Berhasil diupdate";
-      header("Location: index.php");
+      header("Location: index.php?halaman=users");
    } else {
       echo "Terjadi KEsalahan " . mysqli_error($konek);
    }
