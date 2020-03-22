@@ -23,7 +23,9 @@ switch ($halaman) {
    case 'lowongan':
       include 'lowongan.php';
       break;
-
+   case 'add-lowongan':
+      include 'add-lowongan.php';
+      break;
    default:
       include '404.php';
       break;
