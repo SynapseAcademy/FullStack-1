@@ -61,62 +61,67 @@
 
 <?php
 if (isset($_POST['SimpanLowongan'])) {
-   $ekstensiyangbolehdiupload = ['jpg', 'png', 'gif'];
-   $ukuranFile                = $_FILES['foto']['size'];
-   $lokasipenyimpananfile     = '../upload/lowongan/';
-
-   $namaFoto                  = $_FILES['foto']['name'];
-   $filetemp                  = $_FILES['foto']['tmp_name'];
-   $ekstensi                  = explode('.', $namaFoto);
-   $eks                       = strtolower(end($ekstensi));
-
-   if ($namaFoto == null) {
-      $namaLowongan = $_POST['namaLowongan'];
-      $tglTerbit    = date("Y-m-d H: i: s");
-      $tglExpired   = $_POST['tglExpired'];
-      $status       = $_POST['statusLowongan'];
-      $lokasi       = $_POST['lokasiPenempatan'];
-      $syarat       = $_POST['syarat'];
-      $gaji         = $_POST['kisaranGaji'];
-      $iduser       = $_SESSION['iduser'];
-
-      $sql = "INSERT INTO lowongan (lowongan, tgl_terbit_lamaran, tgl_expired_lamaran, status_lowongan, lokasi_penempatan, syarat, kisaran_gaji, id_userfk) VALUES ('$namaLowongan','$tglTerbit','$tglExpired','$status','$lokasi','$syarat','$gaji','$iduser')";
-      $query = mysqli_query($konek, $sql) or die(mysqli_error($konek));
-      if ($query) {
-         echo "Data Berhasil Masuk";
-      } else {
-         echo "Data gagal Masuk";
-      }
+   if ($_POST['namaLowongan'] == '' or  $_POST['tglExpired'] == '' || $_POST['lokasiPenempatan'] == '') {
+      echo "Data Yang kosong wajib diisi terlebih dahulu";
    } else {
-      //KALO FORM FOTO DIINPUTKAN OLEH USER
-      if (in_array($eks, $ekstensiyangbolehdiupload) == true) { //CEK Ekstensi yang boleh diupload
-         if ($ukuranFile < 1000000) { //Cek Ukuran File yang boleh diupload maks. 1 Mb  (dalam satuan byte)
-            $fotonama = date("Y-m-d") . '-' . $namaFoto;
-            move_uploaded_file($filetemp, $lokasipenyimpananfile . '' . $fotonama);
 
-            $namaLowongan = $_POST['namaLowongan'];
-            $tglTerbit    = date("Y-m-d H: i: s");
-            $tglExpired   = $_POST['tglExpired'];
-            $status       = $_POST['statusLowongan'];
-            $lokasi       = $_POST['lokasiPenempatan'];
-            $syarat       = $_POST['syarat'];
-            $gaji         = $_POST['kisaranGaji'];
-            $iduser       = $_SESSION['iduser'];
+      $ekstensiyangbolehdiupload = ['jpg', 'png', 'gif']; //jpg == $ekstensiyang diupload
+      $ukuranFile                = $_FILES['foto']['size'];
+      $lokasipenyimpananfile     = '../upload/lowongan/';
+      $filetemp                  = $_FILES['foto']['tmp_name'];
 
-            $sql = "INSERT INTO lowongan (lowongan, tgl_terbit_lamaran, tgl_expired_lamaran, status_lowongan, lokasi_penempatan, syarat, kisaran_gaji, foto_lowongan, id_userfk) VALUES ('$namaLowongan','$tglTerbit','$tglExpired','$status','$lokasi','$syarat','$gaji','$fotonama','$iduser')";
+      $namaFoto                  = $_FILES['foto']['name']; // 12.foto.JPG atau foto.png
+      $ekstensi                  = explode('.', $namaFoto); //array(12, 'foto', 'JPG')
+      $eks                       = strtolower(end($ekstensi)); // jpg
 
-            $query = mysqli_query($konek, $sql) or die(mysqli_error($konek));
+      if ($namaFoto == null) {
+         $namaLowongan = $_POST['namaLowongan'];
+         $tglTerbit    = date("Y-m-d H: i: s");
+         $tglExpired   = $_POST['tglExpired'];
+         $status       = $_POST['statusLowongan'];
+         $lokasi       = $_POST['lokasiPenempatan'];
+         $syarat       = $_POST['syarat'];
+         $gaji         = $_POST['kisaranGaji'];
+         $iduser       = $_SESSION['iduser'];
 
-            if ($query) {
-               echo "Data Berhasil Masuk";
-            } else {
-               echo "Data gagal Masuk";
-            }
+         $sql = "INSERT INTO lowongan (lowongan, tgl_terbit_lamaran, tgl_expired_lamaran, status_lowongan, lokasi_penempatan, syarat, kisaran_gaji, id_userfk) VALUES ('$namaLowongan','$tglTerbit','$tglExpired','$status','$lokasi','$syarat','$gaji','$iduser')";
+         $query = mysqli_query($konek, $sql) or die(mysqli_error($konek));
+         if ($query) {
+            echo "Data Berhasil Masuk";
          } else {
-            echo "Ukuran File terlalu besar";
+            echo "Data gagal Masuk";
          }
       } else {
-         echo "Format File tidak sesuai";
+         //KALO FORM FOTO DIINPUTKAN OLEH USER
+         if (in_array($eks, $ekstensiyangbolehdiupload) == true) { //CEK Ekstensi yang boleh diupload
+            if ($ukuranFile < 1000000) { //Cek Ukuran File yang boleh diupload maks. 1 Mb  (dalam satuan byte)
+               $fotonama = date("Y-m-d") . '-' . $namaFoto;
+               move_uploaded_file($filetemp, $lokasipenyimpananfile . '' . $fotonama);
+
+               $namaLowongan = $_POST['namaLowongan'];
+               $tglTerbit    = date("Y-m-d H: i: s");
+               $tglExpired   = $_POST['tglExpired'];
+               $status       = $_POST['statusLowongan'];
+               $lokasi       = $_POST['lokasiPenempatan'];
+               $syarat       = $_POST['syarat'];
+               $gaji         = $_POST['kisaranGaji'];
+               $iduser       = $_SESSION['iduser'];
+
+               $sql = "INSERT INTO lowongan (lowongan, tgl_terbit_lamaran, tgl_expired_lamaran, status_lowongan, lokasi_penempatan, syarat, kisaran_gaji, foto_lowongan, id_userfk) VALUES ('$namaLowongan','$tglTerbit','$tglExpired','$status','$lokasi','$syarat','$gaji','$fotonama','$iduser')";
+
+               $query = mysqli_query($konek, $sql) or die(mysqli_error($konek));
+
+               if ($query) {
+                  echo "Data Berhasil Masuk";
+               } else {
+                  echo "Data gagal Masuk";
+               }
+            } else {
+               echo "Ukuran File terlalu besar";
+            }
+         } else {
+            echo "Format File tidak sesuai";
+         }
       }
    }
 }

@@ -13,6 +13,11 @@
                <a class="nav-item nav-link" href="?page=relationship">HUBUNGAN INVESTOR</a>
                <a class="nav-item nav-link" href="?page=carier">KARIR</a>
                <a class="nav-item nav-link" href="?page=contact">HUBUNGI KAMI</a>
+               <?php
+               if (isset($_SESSION['email'])) : ?>
+                  <a class="nav-item nav-link" href="?page=act-logout">LOGOUT</a>
+               <?php endif ?>
+
             </div>
          </div>
    </nav>

@@ -19,8 +19,11 @@ if (isset($_POST['submit-login'])) {
             $_SESSION['loginat']  = $xxx['login_at'];
             $_SESSION['iduser']   = $xxx['id_user'];
 
-
-            header('Location: ./admin/index.php');
+            if ($xxx['level'] == 1) {
+               header('Location: ./admin/index.php'); //Mengarahkan url ke halaman admin
+            } else if ($xxx['level'] == 2) {
+               header('Location: ./index.php'); //Mengarahkan url ke halaman User 
+            }
          } else {
             echo "<hr><hr><hr><hr> Akun belum diaktifkan";
          }

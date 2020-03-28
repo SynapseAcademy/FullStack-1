@@ -21,6 +21,5 @@
          <td><?= $data['tgl_expired_lamaran'] ?></td>
    </tr>
 
-
 <?php endwhile ?>
 </table>
